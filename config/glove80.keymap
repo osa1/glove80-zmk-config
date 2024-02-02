@@ -281,45 +281,7 @@
 
     /* Custom Defined Behaviors */
 / {
-    behaviors {
-        mouse_left: mouse_left {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOUSE_LEFT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_X(-500)>, <&mmv MOVE_X(-5000)>;
-        };
-    };
 
-    behaviors {
-        mouse_right: mouse_right {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOUSE_RIGHT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_X(500)>, <&mmv MOVE_X(5000)>;
-        };
-    };
-
-    behaviors {
-        mouse_up: mouse_up {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOUSE_UP";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_Y(-500)>, <&mmv MOVE_Y(-5000)>;
-        };
-    };
-
-    behaviors {
-        mouse_down: mouse_down {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOUSE_DOWN";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_Y(500)>, <&mmv MOVE_Y(5000)>;
-        };
-    };
 };
 
     /* Automatically generated keymap */
@@ -355,7 +317,7 @@
   &bt BT_CLR            &none         &kp CAPS       &kp KP_NUM         &kp SLCK                                                                                                                  &kp C_MUTE        &kp C_VOL_DN       &kp C_VOL_UP   &none  &bt BT_CLR_ALL
   &sys_reset            &none            &none            &none            &none            &none                                                                                   &none              &none               &none              &none   &none      &sys_reset
  &bootloader  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                                      &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)   &none     &bootloader
-       &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                                             &mouse_left        &mouse_down           &mouse_up       &mouse_right   &none           &none
+       &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                                       &mmv MOVE_X(-500)   &mmv MOVE_Y(500)   &mmv MOVE_Y(-500)   &mmv MOVE_X(500)   &none           &none
        &none            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &msc SCRL_Y(50)     &none     &none   &mmv MOVE_X(-250)   &mmv MOVE_Y(250)   &mmv MOVE_Y(-250)   &mmv MOVE_X(250)   &none           &none
        &none          &kp F10          &kp F11          &kp F12          &kp F13                    &bt_0   &bt_1  &out OUT_USB  &msc SCRL_Y(-50)  &mkp MB1  &mkp MB2                                  &none               &none              &none   &none           &none
             >;
